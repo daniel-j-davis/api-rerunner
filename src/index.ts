@@ -15,7 +15,7 @@ const isValidJSONString = (str: string): boolean => {
   return true;
 };
 
-lineReader.eachLine("C:/Users/danie/Development/api-rerunner/api_file.json", async (line, _): Promise<void> => {
+lineReader.eachLine("/home/ubuntu/apps/api-rerunner/api_file.json", async (line, _): Promise<void> => {
   await eventHandler(line);
 });
 
