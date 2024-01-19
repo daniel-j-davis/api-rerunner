@@ -1,0 +1,31 @@
+{
+  "name": "apex-game-api",
+  "version": "1.0.16",
+  "description": "",
+  "main": "build/src/index.js",
+  "types": "build/src/index.d.ts",
+  "files": [
+    "build",
+    "src/@types"
+  ],
+  "scripts": {
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build",
+    "start": "NODE_ENV=production node build/index.js",
+    "start:dev": "cross-env NODE_ENV=development node build/index.js",
+    "dev": "nodemon --exec \"npm run build && npm run start:dev\" --watch src --ext ts",
+    "build": "tsc -p tsconfig.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^16.10.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.0",
+    "line-reader": "^0.4.0",
+    "nodemon": "^2.0.12",
+    "typescript": "^4.4.3",
+    "ws": "^8.12.1"
+  }
+}
